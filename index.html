@@ -9,21 +9,19 @@
 </head>
 <body>
     <h1>Image Slider</h1>
-    <div id="container">
-        <img src="images/H0G4wt.jpg" id="image" alt="image" onclick="pictures(event)">
+    <div id="container" onclick="pictures(event)">
+        <img src="images/H0G4wt.jpg"  alt="image">
+        <img src="images/mF9Ztl.jpeg"  alt="image">
+
     </div>
 
-   
-   
-   
    <script>
-
-
-
 function pictures(event) {
-    console.log(event);
+if (clientX <= 165) {
+    document.querySelectorAll("#container").innerHTML ="hi"
 
 
+}
 
 }
 
