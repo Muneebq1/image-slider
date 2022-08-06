@@ -7,18 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 </head>
 
 <body>
-    <h1>Image Slide</h1>
+    <h1>Image Slider</h1>
     <div id="container">
-        <img src="img/pic1.jpg" id="slider" class="animate__animated animate__fadeInRight" onclick="pictures(event)"
+        <img src="img/pic1.jpg" id="slider" class="image1" onclick="pictures(event)"
             onmouseover="over()" onmouseout="out()">
 
     </div>
 
     <script>
-{{{{{{{{{{{{{{{{{}}}}}}}}}}}}}}}}}
         function pictures(event) {
 
             let imgWidth = event.offsetX;
@@ -38,7 +39,7 @@
                     if (nextImages > Images.length - 1) {
                         nextImages = 0
                     }
-                    document.getElementById('container').innerHTML = `<img src="./img/${Images[nextImages]}" id="slider"  onclick="pictures(event)" onmouseover="over()" onmouseout="out()">`
+                    document.getElementById('container').innerHTML = `<img src="./img/${Images[nextImages]}" id="slider" class="image2" onclick="pictures(event)" onmouseover="over()" onmouseout="out()">`
 
 
                 }
@@ -48,7 +49,7 @@
                     if (nextImages < 0) {
                         nextImages = Images.length - 1
                     }
-                    document.getElementById('container').innerHTML = `<img src="./img/${Images[nextImages]}" id="slider" onclick="pictures(event)" onmouseover="over()" onmouseout="out()">`
+                    document.getElementById('container').innerHTML = `<img src="./img/${Images[nextImages]}" id="slider" class="image3" onclick="pictures(event)" onmouseover="over()" onmouseout="out()">`
 
                 }
             }
